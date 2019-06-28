@@ -6,7 +6,31 @@
 
     <groupId>io.github.erfangc</groupId>
     <artifactId>raincove-sdk</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
+
+    <name>raincove-sdk</name>
+    <description>SDK for raincove.io</description>
+    <url>https://github.com/raincove-io</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Erfang Chen</name>
+            <email>erfangc@gmail.com</email>
+            <organization>Raincove</organization>
+            <organizationUrl>https://github.com/raincove-io</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/raincove-io/raincove-sdk.git</connection>
+        <developerConnection>scm:git:git@github.com:raincove-io/raincove-sdk.git</developerConnection>
+        <url>https://github.com/raincove-io/raincove-sdk/tree/master</url>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,16 +57,60 @@
     </dependencies>
 
     <distributionManagement>
-        <repository>
-            <id>central</id>
-            <name>central</name>
-            <url>https://repo1.maven.org/maven2</url>
-        </repository>
         <snapshotRepository>
-            <id>snapshots</id>
-            <name>snapshots</name>
-            <url>https://repo1.maven.org/maven2</url>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
     </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifact</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>
