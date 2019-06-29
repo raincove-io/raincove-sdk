@@ -7,10 +7,10 @@ import io.github.erfangc.raincove.sdk.operations.Finser;
 
 public class RaincoveSdk {
 
-    private static String baseUrl;
+    private static String endpoint = "https://api.raincove.io";
 
-    public static void setBaseUrl(String baseUrl) {
-        RaincoveSdk.baseUrl = baseUrl;
+    public static void setEndpoint(String endpoint) {
+        RaincoveSdk.endpoint = endpoint;
     }
 
     public static Finser finser(String accessToken) {
@@ -19,7 +19,7 @@ public class RaincoveSdk {
                 .encoder(new JacksonEncoder())
                 .decoder(new JacksonDecoder())
                 .requestInterceptor(new AccessTokenInterceptor(accessToken))
-                .target(Finser.class, RaincoveSdk.baseUrl != null ? RaincoveSdk.baseUrl : "https://api.raincove.io/finser/api/v1");
+                .target(Finser.class, RaincoveSdk.endpoint + "/finser/api/v1");
     }
 
     public static Finser finser() {
@@ -28,8 +28,7 @@ public class RaincoveSdk {
                 .encoder(new JacksonEncoder())
                 .decoder(new JacksonDecoder())
                 .requestInterceptor(new AccessTokenInterceptor())
-                .target(Finser.class, RaincoveSdk.baseUrl != null ? RaincoveSdk.baseUrl : "https://api.raincove.io/finser/api/v1");
-
+                .target(Finser.class, RaincoveSdk.endpoint + "/finser/api/v1");
     }
 
 }
