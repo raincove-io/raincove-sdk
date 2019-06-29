@@ -6,22 +6,30 @@
 
     <groupId>io.github.erfangc</groupId>
     <artifactId>raincove-sdk</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <name>raincove-sdk</name>
-    <description>SDK for raincove.io</description>
+    <description>SDK library raincove-sdk</description>
     <url>https://github.com/raincove-io</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
             <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+
     <developers>
         <developer>
             <name>Erfang Chen</name>
             <email>erfangc@gmail.com</email>
-            <organization>Raincove</organization>
+            <organization>io.github.erfangc</organization>
             <organizationUrl>https://github.com/raincove-io</organizationUrl>
         </developer>
     </developers>
@@ -31,12 +39,6 @@
         <developerConnection>scm:git:git@github.com:raincove-io/raincove-sdk.git</developerConnection>
         <url>https://github.com/raincove-io/raincove-sdk/tree/master</url>
     </scm>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -55,17 +57,6 @@
             <version>1.10</version>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-        </repository>
-    </distributionManagement>
 
     <build>
         <plugins>
@@ -112,5 +103,15 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
