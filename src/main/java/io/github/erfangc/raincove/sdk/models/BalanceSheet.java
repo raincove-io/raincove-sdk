@@ -13,6 +13,7 @@ public class BalanceSheet {
     private Double propertyPlantAndEquipment;
     private Double otherAssets;
     private Double totalAssets;
+    private Double capitaSurplus;
     private Double accountsPayable;
     private Double shortOrCurrentLongTermDebt;
     private Double otherCurrentLiabilities;
@@ -26,6 +27,14 @@ public class BalanceSheet {
     private Double otherStockholderEquity;
     private Double totalStockholderEquity;
     private Double netTangibleAssets;
+    private Double goodwill;
+    private Double intangibleAssets;
+    private Double accumulatedAmortization;
+    private Double deferredLongTermAssetCharges;
+    private Double redeemablePreferredStock;
+    private Double deferredLongTermLiabilityCharges;
+    private Double minorityInterest;
+    private Double negativeGoodwill;
 
     public Double getCashAndCashEquivalents() {
         return this.cashAndCashEquivalents;
@@ -114,6 +123,15 @@ public class BalanceSheet {
 
     public BalanceSheet setTotalAssets(Double totalAssets) {
         this.totalAssets = totalAssets;
+        return this;
+    }
+
+    public Double getCapitaSurplus() {
+        return this.capitaSurplus;
+    }
+
+    public BalanceSheet setCapitaSurplus(Double capitaSurplus) {
+        this.capitaSurplus = capitaSurplus;
         return this;
     }
 
@@ -231,6 +249,78 @@ public class BalanceSheet {
 
     public BalanceSheet setNetTangibleAssets(Double netTangibleAssets) {
         this.netTangibleAssets = netTangibleAssets;
+        return this;
+    }
+
+    public Double getGoodwill() {
+        return this.goodwill;
+    }
+
+    public BalanceSheet setGoodwill(Double goodwill) {
+        this.goodwill = goodwill;
+        return this;
+    }
+
+    public Double getIntangibleAssets() {
+        return this.intangibleAssets;
+    }
+
+    public BalanceSheet setIntangibleAssets(Double intangibleAssets) {
+        this.intangibleAssets = intangibleAssets;
+        return this;
+    }
+
+    public Double getAccumulatedAmortization() {
+        return this.accumulatedAmortization;
+    }
+
+    public BalanceSheet setAccumulatedAmortization(Double accumulatedAmortization) {
+        this.accumulatedAmortization = accumulatedAmortization;
+        return this;
+    }
+
+    public Double getDeferredLongTermAssetCharges() {
+        return this.deferredLongTermAssetCharges;
+    }
+
+    public BalanceSheet setDeferredLongTermAssetCharges(Double deferredLongTermAssetCharges) {
+        this.deferredLongTermAssetCharges = deferredLongTermAssetCharges;
+        return this;
+    }
+
+    public Double getRedeemablePreferredStock() {
+        return this.redeemablePreferredStock;
+    }
+
+    public BalanceSheet setRedeemablePreferredStock(Double redeemablePreferredStock) {
+        this.redeemablePreferredStock = redeemablePreferredStock;
+        return this;
+    }
+
+    public Double getDeferredLongTermLiabilityCharges() {
+        return this.deferredLongTermLiabilityCharges;
+    }
+
+    public BalanceSheet setDeferredLongTermLiabilityCharges(Double deferredLongTermLiabilityCharges) {
+        this.deferredLongTermLiabilityCharges = deferredLongTermLiabilityCharges;
+        return this;
+    }
+
+    public Double getMinorityInterest() {
+        return this.minorityInterest;
+    }
+
+    public BalanceSheet setMinorityInterest(Double minorityInterest) {
+        this.minorityInterest = minorityInterest;
+        return this;
+    }
+
+    public Double getNegativeGoodwill() {
+        return this.negativeGoodwill;
+    }
+
+    public BalanceSheet setNegativeGoodwill(Double negativeGoodwill) {
+        this.negativeGoodwill = negativeGoodwill;
         return this;
     }
 

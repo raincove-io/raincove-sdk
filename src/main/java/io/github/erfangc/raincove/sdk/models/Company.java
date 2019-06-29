@@ -4,6 +4,8 @@ package io.github.erfangc.raincove.sdk.models;
 public class Company {
 
     private String id;
+    private Double marketCap;
+    private Double previousClose;
     private String idType;
     private String description;
     private String sector;
@@ -22,6 +24,24 @@ public class Company {
 
     public Company setId(String id) {
         this.id = id;
+        return this;
+    }
+
+    public Double getMarketCap() {
+        return this.marketCap;
+    }
+
+    public Company setMarketCap(Double marketCap) {
+        this.marketCap = marketCap;
+        return this;
+    }
+
+    public Double getPreviousClose() {
+        return this.previousClose;
+    }
+
+    public Company setPreviousClose(Double previousClose) {
+        this.previousClose = previousClose;
         return this;
     }
 

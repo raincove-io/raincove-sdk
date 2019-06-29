@@ -3,8 +3,7 @@ package io.github.erfangc.raincove.sdk.apis;
 import feign.Feign;
 import feign.jackson.JacksonDecoder;
 import feign.jackson.JacksonEncoder;
-import io.github.erfangc.raincove.sdk.operations.Companies;
-import io.github.erfangc.raincove.sdk.operations.FinancialStatements;
+import io.github.erfangc.raincove.sdk.operations.Finser;
 
 public class RaincoveSdk {
 
@@ -14,41 +13,22 @@ public class RaincoveSdk {
         RaincoveSdk.baseUrl = baseUrl;
     }
 
-    public static Companies companies(String accessToken) {
+    public static Finser finser(String accessToken) {
         return Feign
                 .builder()
                 .encoder(new JacksonEncoder())
                 .decoder(new JacksonDecoder())
                 .requestInterceptor(new AccessTokenInterceptor(accessToken))
-                .target(Companies.class, RaincoveSdk.baseUrl != null ? RaincoveSdk.baseUrl : "https://api.raincove.io/");
+                .target(Finser.class, RaincoveSdk.baseUrl != null ? RaincoveSdk.baseUrl : "https://api.raincove.io/finser/api/v1");
     }
 
-    public static Companies companies() {
+    public static Finser finser() {
         return Feign
                 .builder()
                 .encoder(new JacksonEncoder())
                 .decoder(new JacksonDecoder())
                 .requestInterceptor(new AccessTokenInterceptor())
-                .target(Companies.class, RaincoveSdk.baseUrl != null ? RaincoveSdk.baseUrl : "https://api.raincove.io/");
-
-    }
-
-    public static FinancialStatements financialStatements(String accessToken) {
-        return Feign
-                .builder()
-                .encoder(new JacksonEncoder())
-                .decoder(new JacksonDecoder())
-                .requestInterceptor(new AccessTokenInterceptor(accessToken))
-                .target(FinancialStatements.class, RaincoveSdk.baseUrl != null ? RaincoveSdk.baseUrl : "https://api.raincove.io/");
-    }
-
-    public static FinancialStatements financialStatements() {
-        return Feign
-                .builder()
-                .encoder(new JacksonEncoder())
-                .decoder(new JacksonDecoder())
-                .requestInterceptor(new AccessTokenInterceptor())
-                .target(FinancialStatements.class, RaincoveSdk.baseUrl != null ? RaincoveSdk.baseUrl : "https://api.raincove.io/");
+                .target(Finser.class, RaincoveSdk.baseUrl != null ? RaincoveSdk.baseUrl : "https://api.raincove.io/finser/api/v1");
 
     }
 

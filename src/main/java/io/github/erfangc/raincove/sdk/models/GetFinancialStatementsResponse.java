@@ -4,13 +4,13 @@ import java.util.List;
 
 public class GetFinancialStatementsResponse {
 
-    private List<GaapFinancialStatement> financialStatements;
+    private List<FinancialStatement> financialStatements;
 
-    public List<GaapFinancialStatement> getFinancialStatements() {
+    public List<FinancialStatement> getFinancialStatements() {
         return this.financialStatements;
     }
 
-    public GetFinancialStatementsResponse setFinancialStatements(List<GaapFinancialStatement> financialStatements) {
+    public GetFinancialStatementsResponse setFinancialStatements(List<FinancialStatement> financialStatements) {
         this.financialStatements = financialStatements;
         return this;
     }
