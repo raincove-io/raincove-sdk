@@ -44,11 +44,11 @@ public interface Finser {
 
     @RequestLine("GET /companies/{companyId}/financial-statements/{id}")
     @Headers({"Content-Type: application/json", "Accept: application/json"})
-    GetFinancialStatementResponse getFinancialStatement(@Param("companyId") String companyId,@Param("id") String id);
+    GetFinancialStatementResponse getFinancialStatement(@Param("companyId") String companyId, @Param("id") String id);
 
     @RequestLine("DELETE /companies/{companyId}/financial-statements/{id}")
     @Headers({"Content-Type: application/json", "Accept: application/json"})
-    DeleteFinancialStatementResponse deleteFinancialStatement(@Param("companyId") String companyId,@Param("id") String id);
+    DeleteFinancialStatementResponse deleteFinancialStatement(@Param("companyId") String companyId, @Param("id") String id);
 
     @RequestLine("POST /companies/financial-statements/_search")
     @Headers({"Content-Type: application/json", "Accept: application/json"})
