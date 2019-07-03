@@ -41,11 +41,11 @@ public interface IAM {
     @Headers({"Content-Type: application/json", "Accept: application/json"})
     CreateOrUpdateBindingResponse createOrUpdateBinding(CreateOrUpdateBindingRequest body, @Param("roleId") String roleId);
 
-    @RequestLine("GET /roles/{roleId}/rolebindings/{id}")
+    @RequestLine("GET /roles/{roleId}/bindings/{id}")
     @Headers({"Content-Type: application/json", "Accept: application/json"})
     GetBindingResponse getBinding(@Param("roleId") String roleId, @Param("id") String id);
 
-    @RequestLine("DELETE /roles/{roleId}/rolebindings/{id}")
+    @RequestLine("DELETE /roles/{roleId}/bindings/{id}")
     @Headers({"Content-Type: application/json", "Accept: application/json"})
     DeleteBindingResponse deleteBinding(@Param("roleId") String roleId, @Param("id") String id);
 

@@ -4,14 +4,14 @@ import java.util.List;
 
 public class GetBindingsResponse {
 
-    private List<Binding> roleBindings;
+    private List<Binding> bindings;
 
-    public List<Binding> getRoleBindings() {
-        return this.roleBindings;
+    public List<Binding> getBindings() {
+        return this.bindings;
     }
 
-    public GetBindingsResponse setRoleBindings(List<Binding> roleBindings) {
-        this.roleBindings = roleBindings;
+    public GetBindingsResponse setBindings(List<Binding> bindings) {
+        this.bindings = bindings;
         return this;
     }
 

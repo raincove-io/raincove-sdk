@@ -3,14 +3,14 @@ package io.github.erfangc.raincove.sdk.models;
 
 public class GetBindingResponse {
 
-    private Binding roleBinding;
+    private Binding binding;
 
-    public Binding getRoleBinding() {
-        return this.roleBinding;
+    public Binding getBinding() {
+        return this.binding;
     }
 
-    public GetBindingResponse setRoleBinding(Binding roleBinding) {
-        this.roleBinding = roleBinding;
+    public GetBindingResponse setBinding(Binding binding) {
+        this.binding = binding;
         return this;
     }
 
