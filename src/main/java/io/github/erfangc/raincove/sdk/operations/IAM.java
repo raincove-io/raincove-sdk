@@ -50,7 +50,7 @@ public interface IAM {
     DeleteBindingResponse deleteBinding(@Param("roleId") String roleId, @Param("id") String id);
 
     @RequestLine("GET /_authorize")
-    @Headers({"Content-Type: application/json", "Accept: application/json", "X-Original-URL: {xOriginalUrl}", "X-Original-Method: {xOriginalMethod}"})
-    AuthorizeResponse authorizeRequest(@Param("xOriginalUrl") String xOriginalUrl, @Param("xOriginalMethod") String xOriginalMethod);
+    @Headers({"Content-Type: application/json", "Accept: application/json", "X-Auth-Request-Redirect: {xAuthRequestRedirect}", "X-Original-Method: {xOriginalMethod}"})
+    AuthorizeResponse authorizeRequest(@Param("xAuthRequestRedirect") String xAuthRequestRedirect, @Param("xOriginalMethod") String xOriginalMethod);
 
 }
