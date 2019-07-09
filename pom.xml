@@ -6,7 +6,7 @@
 
     <groupId>io.github.erfangc</groupId>
     <artifactId>raincove-sdk</artifactId>
-    <version>0.3.0</version>
+    <version>0.3.1</version>
 
     <name>raincove-sdk</name>
     <description>SDK library raincove-sdk</description>
