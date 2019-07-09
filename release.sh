@@ -34,7 +34,7 @@ fi
 
 groupId=io.github.erfangc
 artifactId=raincove-sdk
-repoUrl=https://repo1.maven.org/maven2
+repoUrl=https://oss.sonatype.org/content/groups/public
 
 #
 # find the latest version
