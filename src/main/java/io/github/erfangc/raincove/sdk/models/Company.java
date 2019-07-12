@@ -3,6 +3,7 @@ package io.github.erfangc.raincove.sdk.models;
 
 public class Company {
 
+    private Double beta3YMonthly;
     private String id;
     private Double marketCap;
     private Double previousClose;
@@ -17,6 +18,15 @@ public class Company {
     private String createdBy;
     private String updatedOn;
     private String updatedBy;
+
+    public Double getBeta3YMonthly() {
+        return this.beta3YMonthly;
+    }
+
+    public Company setBeta3YMonthly(Double beta3YMonthly) {
+        this.beta3YMonthly = beta3YMonthly;
+        return this;
+    }
 
     public String getId() {
         return this.id;
