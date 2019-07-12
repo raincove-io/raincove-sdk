@@ -47,10 +47,10 @@ public interface IAM {
 
     @RequestLine("DELETE /role-bindings/{id}")
     @Headers({"Content-Type: application/json", "Accept: application/json"})
-    DeleteRoleBindingResponse deleteBinding(@Param("id") String id);
+    DeleteRoleBindingResponse deleteRoleBinding(@Param("id") String id);
 
     @RequestLine("GET /_authorize")
-    @Headers({"Content-Type: application/json", "Accept: application/json", "X-Original-URL: {xOriginalUrl}", "X-Original-Method: {xOriginalMethod}"})
-    AuthorizeResponse authorizeRequest(@Param("xOriginalUrl") String xOriginalUrl, @Param("xOriginalMethod") String xOriginalMethod);
+    @Headers({"Content-Type: application/json", "Accept: application/json", "X-Auth-Request-Redirect: {xAuthRequestRedirect}", "X-Original-Method: {xOriginalMethod}"})
+    AuthorizeResponse authorizeRequest(@Param("xAuthRequestRedirect") String xAuthRequestRedirect, @Param("xOriginalMethod") String xOriginalMethod);
 
 }
