@@ -39,7 +39,7 @@ public interface IAM {
 
     @RequestLine("POST /role-bindings")
     @Headers({"Content-Type: application/json", "Accept: application/json"})
-    CreateOrUpdateRoleBindingResponse createOrUpdateBinding(CreateOrUpdateRoleBindingRequest body);
+    CreateOrUpdateRoleBindingResponse createOrUpdateRoleBinding(CreateOrUpdateRoleBindingRequest body);
 
     @RequestLine("GET /role-bindings/{id}")
     @Headers({"Content-Type: application/json", "Accept: application/json"})
