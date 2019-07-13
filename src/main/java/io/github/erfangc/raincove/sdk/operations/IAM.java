@@ -33,7 +33,7 @@ public interface IAM {
     @Headers({"Content-Type: application/json", "Accept: application/json"})
     DeleteRoleResponse deleteRole(@Param("id") String id);
 
-    @RequestLine("GET /roles/{roleId}/bindings")
+    @RequestLine("GET /roles/{roleId}/role-bindings")
     @Headers({"Content-Type: application/json", "Accept: application/json"})
     GetRoleBindingsResponse getRoleBindings(@Param("roleId") String roleId);
 
