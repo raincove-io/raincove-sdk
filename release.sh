@@ -86,7 +86,7 @@ echo -e nextVersion: ${nextVersion}
 echo -e ----------------------------------------------------------------------------------------------------------------
 
 mvn -B versions:set -DnewVersion=${nextVersion} && mvn -B versions:commit
-git commit -m"${nextVersion}" && git tag v${nextVersion}
+git commit -am"${nextVersion}" && git tag v${nextVersion}
 git checkout v${nextVersion}
 echo Tag created: v${nextVersion}
 echo Deploying to staging repository
